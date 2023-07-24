@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    # Leaving it for future use
+  tasks:
+
+    - name: Install Prometheus exporter for Windows  
+      win_chocolatey:
+        name: prometheus-windows-exporter.install
+        state: latest
+        become: yes
+        become_user: Administrator
+        become_method: runas
+        arguments:
+          - /install
+          - /passive
+          - /norestart
+
+    - ansible.builtin.debug:
+        var: output

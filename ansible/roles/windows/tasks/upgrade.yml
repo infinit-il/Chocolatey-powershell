@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+  vars:
+    # Leaving it for future use
+  tasks:
+
+    - name: Upgrade Liquibase package  
+      win_chocolatey:
+        name: import42
+        state: latest
+        become: yes
+        become_user: Administrator
+        become_method: runas
+        arguments:
+          - /upgrade
+          - /passive
+          - /norestart
+
+    - ansible.builtin.debug:
+        var: output

@@ -1,0 +1,49 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+
+- name: Install git
+  win_chocolatey:
+    name: git
+    state: present
+   
+- name: Install JDK 17
+  win_chocolatey:
+    name: oracle17jdk
+    state: present
+    
+- name: Install VSCode
+  win_chocolatey:
+    name: vscode
+    state: present
+    
+- name: Install VSCode extension Git Lens
+  win_chocolatey:
+    name: vscode-gitlens
+    state: present
+    
+- name: Install VSCode extension Git Lens
+  win_chocolatey:
+    name: vscode-gitgraph
+    source: https://someserver/api/v2/
+    
+- name: Install VSCode extension Git Lens
+  win_chocolatey:
+    name: vscode-githistory
+    source: https://someserver/api/v2/
+
+- name: Install sqlcl
+  win_chocolatey:
+    name: sqlcl
+    source: https://someserver/api/v2/
+ 
+- name: Install Oracle DB 12
+  win_chocolatey:
+    name: oracledb12
+    source: https://someserver/api/v2/
+    
+- name: Install Oracle APEX
+  win_chocolatey:
+    name: oracleapex
+    source: https://someserver/api/v2/
