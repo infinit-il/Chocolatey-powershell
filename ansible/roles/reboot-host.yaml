@@ -1,0 +1,2 @@
+ - name: Reboot the host to complete .NET Framework 4.8 install
+    ansible.windows.win_reboot:

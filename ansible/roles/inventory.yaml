@@ -1,0 +1,5 @@
+[windows]
+win43 ansible_host=172.30.200.43 ansible_user=apex1 ansible_password=Ax@2022 ansible_remote_tmp=C:\Users\Apex1\tmp
+
+ansible_connection=winrm
+ansible_shell_type=powershell

@@ -1,0 +1,81 @@
+
+PLAY [Playbook] ****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [win43]
+ok: [win42]
+
+TASK [Gather facts from chocolatey] ********************************************
+fatal: [win43]: FAILED! => {"ansible_facts": {"ansible_chocolatey": {"config": {}, "feature": {}, "packages": [], "sources": []}}, "changed": false, "msg": "Failed to find Chocolatey installation, make sure choco.exe is in the PATH env value"}
+ok: [win42]
+
+TASK [Displays the Packages] ***************************************************
+ok: [win42] => {
+    "ansible_chocolatey.packages": [
+        {
+            "package": "abra",
+            "version": "0.1.1"
+        },
+        {
+            "package": "chocolatey",
+            "version": "2.1.0"
+        },
+        {
+            "package": "chocolatey-compatibility.extension",
+            "version": "1.0.0"
+        },
+        {
+            "package": "chocolatey-core.extension",
+            "version": "1.4.0"
+        },
+        {
+            "package": "chocolatey-dotnetfx.extension",
+            "version": "1.0.1"
+        },
+        {
+            "package": "chocolateygui",
+            "version": "2.1.0"
+        },
+        {
+            "package": "dotnetfx",
+            "version": "4.8.0.20220524"
+        },
+        {
+            "package": "GoogleChrome",
+            "version": "114.0.5735.199"
+        },
+        {
+            "package": "import42",
+            "version": "0.2.2"
+        },
+        {
+            "package": "kadabra",
+            "version": "1.0.0"
+        },
+        {
+            "package": "KB2919355",
+            "version": "1.0.20160915"
+        },
+        {
+            "package": "KB2919442",
+            "version": "1.0.20160915"
+        },
+        {
+            "package": "packa",
+            "version": "0.1.0"
+        },
+        {
+            "package": "packageb",
+            "version": "0.1.5"
+        },
+        {
+            "package": "view",
+            "version": "0.1.1"
+        }
+    ]
+}
+
+PLAY RECAP *********************************************************************
+win42                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+win43                      : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+

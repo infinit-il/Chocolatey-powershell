@@ -1,0 +1,58 @@
+---
+- name: "Install all" 
+  hosts: windows
+  tasks:
+    - name: Install vscode
+      win_chocolatey:
+        name: vscode
+        version: '1.80.1'
+        source: https://github.com/infinit-il/test-repo-metropolinet
+        state: present
+    - name: Install oracle17jdk
+      win_chocolatey:
+        name: oracle17jdk
+        version: '17.0.2'
+        source: https://github.com/infinit-il/test-repo-metropolinet
+        state: present
+    - name: Install vscode-gitlens
+      win_chocolatey:
+        name: vscode-gitlens
+        version: '1.0.0.20181011'
+        source: https://github.com/infinit-il/test-repo-metropolinet
+        state: present
+    - name: Install python
+      win_chocolatey:
+        name: python
+        version: '3.11.4'
+        source: https://github.com/infinit-il/test-repo-metropolinet
+        state: present
+    - name: Install gitviz
+      win_chocolatey:
+        name: gitviz
+        version: '1.1'
+        source: https://github.com/infinit-il/test-repo-metropolinet
+        state: present
+    - name: Install ethanbrown.gitextensionsconfiguration
+      win_chocolatey:
+        name: ethanbrown.gitextensionsconfiguration
+        version: '0.0.1'
+        source: https://github.com/infinit-il/test-repo-metropolinet
+        state: present
+    - name: Install ldapexplorer
+      win_chocolatey:
+        name: ldapexplorer
+        version: '1.0.0.0'
+        source: https://github.com/infinit-il/test-repo-metropolinet
+        state: present
+    - name: Install liquibase
+      win_chocolatey:
+        name: liquibase
+        version: '4.23.0'
+        source: https://github.com/infinit-il/test-repo-metropolinet
+        state: present
+    - name: Install oracle-sql-developer
+      win_chocolatey:
+        name: oracle-sql-developer
+        version: '18.4.0'
+        source: https://github.com/infinit-il/test-repo-metropolinet
+        state: present
