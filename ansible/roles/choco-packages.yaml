@@ -2,15 +2,8 @@
   - name: Install packages
     hosts: windows
     tasks:  
-      - name: install packages from local
+      - name: install packages from git repo
         win_chocolatey:
-          name: Install Abra
-          source: "https://github.com/infinit-il/Chocolatey-powershell/tree/ansible-test/chikity/packages/abra.0.1.0.nupkg"
-          state: present
-      # - name: Install multiple packages
-      #  win_chocolatey:
-      #  name:
-      #    - procexp
-      #    - putty
-      #    - windirstat
-      #    state: present
+          name: Abra
+        environment:
+          - chocolateyDownloadUrl: "https://github.com/raam-infi/Chocolatey-powershell/blob/main/chikity/packages/abra.0.1.0.nupkg"

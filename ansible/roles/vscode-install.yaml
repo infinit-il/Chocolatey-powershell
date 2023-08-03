@@ -1,0 +1,9 @@
+---
+- name: Install vscode
+  hosts: windows
+  tasks:
+    - name: install vscode
+      win_chocolatey:
+        name: vscode
+        version: '1.80.1'
+        state: present
